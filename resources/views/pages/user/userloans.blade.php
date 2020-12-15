@@ -27,14 +27,14 @@
               </div>
             </div>
             <div class="text-center">
-              <h1 class="mb-2 text-white">Available Limit,</h1>
+              <h1 class="mb-2 text-white">Available Limit</h1>
               <h1 class="mb-2 text-white">NGN {{number_format($ceiling->approved_ceiling, $decimal=2)}}</h1>
               <div class="">
               @if($countLoan < 1)
-              <a class="btn btn-primary mb-2" href="{{route('loan.applyloan')}}">Apply Now!!</a>
+              <a class="btn btn-primary btn-lg mb-2" href="{{route('loan.applyloan')}}">Apply Now!!</a>
               </div>
               @else
-              <a class="btn btn-primary mb-2" href="{{route('loan.applyloan')}}">Apply Now!!</a>
+              <a class="btn btn-success mb-2" href="{{route('loan.applyloan')}}">Continue Application!!</a>
               <h6 class="mb-2 text-white">FILE NUMBER: {{Auth::user()->file_no}}</h6>
            @endif
               

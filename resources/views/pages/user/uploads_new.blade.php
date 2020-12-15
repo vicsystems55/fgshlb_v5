@@ -15,13 +15,21 @@
 @section('content')
 {{-- Dashboard Analytics Start --}}
 <section id="dashboard-analytics">
+
+<style>
+
+    .btn-info{
+        background-color: #015A1A;
+    }
+
+</style>
  
                 <!-- <div class="container">
 
                 <h4 class="display-4 mt-5 text-center">No document uploaded yet...</h4>
 
                     <div class=" text-center">
-                        <a class="btn btn-primary mx-auto" href="{{route('user.profile')}}">Proceed to Update profile</a>
+                        <a class="btn btn-info mx-auto" href="{{route('user.profile')}}">Proceed to Update profile</a>
                     </div>
                     
                 </div> -->
@@ -33,11 +41,28 @@
 
                 @if($user_doc->count()>= 7 && $personal_data)
 
-                <a class="btn btn-block btn-primary shadow" href="{{route('user.view_profile')}}">Preview Your Profile</a>
+                <a class="btn btn-lg btn-block btn-success shadow col-md-5 mx-auto" href="{{route('user.view_profile')}}">Preview Your Profile</a>
 
                 @else
 
                 @endif
+
+
+                                <div class="col-md-5 p-1 mx-auto">
+
+                               
+                                @error('passport')
+                                    <p class="alert alert-warning" >
+                                        <strong>{{ $message }}</strong>
+                                    </p>
+                                    @enderror
+
+                                    @if(Session::has('passport'))
+                                        <p class="alert alert-info" >
+                                            <strong>{{Session::get('passport')}}</strong>
+                                        </p>
+                                    @endif
+                                </div>
 
 
                     <div class="col-md-10 mx-auto card {{$user_passport?'bg-success text-white':''}}  mt-2">
@@ -67,7 +92,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="passport"  class=" {{$user_passport?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="passport"  class=" {{$user_passport?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -75,13 +100,11 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>Passport</h2>
+                                        <h2 class="{{$user_passport?'text-white':''}}">Passport</h2>
                                         <ul>
-                                            <li>Size 340 x 340</li>
-                                            <li>Size 340 x 340</li>
-                                            <li>Size 340 x 340</li>
-                                            <li>Size 340 x 340</li>
-                                            <li>Size 340 x 340</li>
+                                            <li>Pixels: 340 x 340</li>
+                                            <li>File size limit: 120kb</li>
+                                            
                                         </ul>
                                         
                                         @if($user_passport)
@@ -115,7 +138,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -156,7 +179,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="first_appoint"  class=" {{$first_appoint?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="first_appoint"  class=" {{$first_appoint?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -204,7 +227,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -245,7 +268,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="confirmation_gezzete"  class=" {{$confirmation_gezzete?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="confirmation_gezzete"  class=" {{$confirmation_gezzete?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -293,7 +316,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -334,7 +357,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="next_of_kin"  class=" {{$next_of_kin?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="next_of_kin"  class=" {{$next_of_kin?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -386,7 +409,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -426,7 +449,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="pay_slip"  class=" {{$pay_slip?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="pay_slip"  class=" {{$pay_slip?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -474,7 +497,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -514,7 +537,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="id_card"  class=" {{$id_card?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="id_card"  class=" {{$id_card?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -562,7 +585,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -602,7 +625,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="pfa_letter"  class=" {{$pfa_letter?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="pfa_letter"  class=" {{$pfa_letter?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -650,7 +673,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>
@@ -690,7 +713,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="change_of_name"  class=" {{$change_of_name?'d-none':''}} btn btn-primary shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="change_of_name"  class=" {{$change_of_name?'d-none':''}} btn btn-info shadow">Choose</button>
                                         </div>
                         
                                         
@@ -738,7 +761,7 @@
                                                 </div>
 
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-block btn-primary shadow">Upload</button>
+                                                    <button class="btn btn-block btn-info shadow">Upload</button>
                                                 </div>
 
                                             </form>

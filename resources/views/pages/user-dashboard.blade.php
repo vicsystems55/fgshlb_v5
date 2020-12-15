@@ -169,7 +169,7 @@
               
             </div>
             <div class=" {{$application_stage?'d-none':''}} card-footer">
-            <a href="{{route('user.profile')}}" class="btn gradient-light-primary btn-block waves-effect waves-light">Get Started</a>
+            <a href="{{route('user.profile')}}" class="btn gradient-light-success btn-block waves-effect waves-light">Get Started</a>
 
             </div>
           </div>
@@ -198,7 +198,7 @@
               
             </div>
             <div class="card-footer mb-0">
-            <a href="{{route('user.profile')}}" class="btn gradient-light-primary btn-block waves-effect waves-light">Get Started</a>
+            <a href="{{route('user.profile')}}" class="btn gradient-light-success btn-block waves-effect waves-light">Get Started</a>
 
             </div>
           </div>
@@ -226,7 +226,7 @@
                 
               </div>
               <div class="card-footer mb-0">
-                <a href="{{route('user.profile')}}" class="btn gradient-light-primary btn-block waves-effect waves-light">Read More</a>
+                <a href="{{route('user.profile')}}" class="btn gradient-light-success btn-block waves-effect waves-light">Read More</a>
 
             </div>
           </div>

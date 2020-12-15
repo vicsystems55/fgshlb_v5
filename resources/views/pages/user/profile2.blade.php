@@ -35,7 +35,7 @@
       <div class="col-12">
           <div class="card">
               <div class="card-header">
-                  <h1 class="card-title text-center">Step 1/3</h1>
+                  <h1 class="card-title text-center">Step 1/4</h1>
               </div>
               <div class="card-content">
                   <div class="card-body">
@@ -183,7 +183,7 @@
 
                                  <div class="col-12 d-flex justify-content-end">
                                       
-                                      <button type="submit" class="btn btn-primary shadow mr-1 mb-1">Submit</button>
+                                      <button type="submit" class="btn btn-success shadow mr-1 mb-1">Submit</button>
                                   </div>
                               </div>
                           </div>

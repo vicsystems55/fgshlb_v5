@@ -1,12 +1,28 @@
 @php
     $configData = Helper::applClasses();
 @endphp
+
+<style>
+                   .main-menu.menu-light .navigation > li.active > a {
+                    background: linear-gradient(118deg, #015A1A, rgba(33, 153, 12, 0.7));
+                    box-shadow: 0 0 10px 1px rgba(195, 251, 116, 0.9);
+                    color: #fff;
+                    font-weight: 400;
+                    border-radius: 4px;
+                }
+
+                .main-menu.menu-light .navigation > li ul .active {
+                    background: linear-gradient(118deg, #015A1A, rgba(33, 153, 12, 0.7));
+                    box-shadow:  0 0 10px 1px rgba(195, 251, 116, 0.9);
+                    border-radius: 4px;
+                }
+                </style>
 <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
                         <div class="brand-log"></div>
-                        <h2 class="text-success mb-0">FGSHLB</h2>
+                        <h2 class="text-success brand-text mb-0">FGSHLB</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
                 <i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block primary" data-ticon="icon-disc"></i></a></li>
@@ -16,7 +32,7 @@
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item  {{ (request()->is('user')) ? 'active' : '' }}">
-                <a href="/user">
+                <a href="{{config('app.url')}}user">
                 <i class="feather icon-home"></i>
                 <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
                 
@@ -50,15 +66,7 @@
                         </li>
                     </ul>
                 </li> -->
-                <style>
-                   .main-menu.menu-light .navigation > li.active > a {
-                    background: linear-gradient(118deg, #015A1A, rgba(33, 153, 12, 0.7));
-                    box-shadow: 0 0 10px 1px rgba(115, 103, 240, 0.7);
-                    color: #fff;
-                    font-weight: 400;
-                    border-radius: 4px;
-                }
-                </style>
+                
                 <li class=" {{ (request()->is('user/uploads')) ? 'active' : '' }} nav-item"><a href="{{route('user.uploads')}}">
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Uploads</span></a>
                 </li>
@@ -68,7 +76,7 @@
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">My Loans</span></a>
                 </li>
                 
-                <li class=" nav-item"><a href="{{ route('user.notifications')}}"><i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Notifications</span>
+                <li class=" {{ (request()->is('user/notifications')) ? 'active' : '' }}  nav-item"><a href="{{ route('user.notifications')}}"><i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Notifications</span>
                 <span class="badge badge badge-warning badge-pill float-right">{{$notifications->count()}}</span>
                 </a>
                 </li>

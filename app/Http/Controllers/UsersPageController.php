@@ -62,11 +62,11 @@ class UsersPageController extends Controller
             'pageHeader' => true
         ];
 
-        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+        $notifications = notification::where('user_id', Auth::user()->id)->get();
 
         return view('pages.user.notifications', [
             'pageConfigs' => $pageConfigs,
-            'notifications' => $notifcations
+            'notifications' => $notifications
         ]);
     }
 

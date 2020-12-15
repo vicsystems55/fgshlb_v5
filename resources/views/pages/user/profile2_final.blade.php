@@ -50,7 +50,7 @@
                           <div class="form-body">
                           <div class="d-flex justify-content-center">
                             
-                                    <a href="{{route('edit_bio')}}" class="btn btn-outline-primary">Edit</a>
+                                    <a href="{{route('edit_bio')}}" class="btn btn-outline-success">Edit</a>
                                
                           </div>
 
@@ -174,7 +174,7 @@
 
                                  <div class="col-12 d-flex justify-content-end">
                                       
-                                      <a href="{{route('user.profile2')}}" class="btn btn-primary shadow mr-1 mb-1">Next</a>
+                                      <a href="{{route('user.profile2')}}" class="btn btn-success shadow mr-1 mb-1">Next</a>
                                   </div>
                               </div>
                           </div>
