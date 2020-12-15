@@ -11,15 +11,7 @@
   <div class="col-md-9 mx-auto ">
       <div class="card bg-authentication rounded-0">
           <div class="row m-0">
-              <div class="col-lg-1 d-lg-block d-none text-center align-self-center pl-0 pr-3 py-0">
-
-
-
-                  <img src="{{ asset('images/pages/register.jpg') }}" alt="branding logo">
-
-
-                  
-              </div>
+              
               <div class="col-lg-11 col-12 p-0">
                   <div class="card rounded-0 mb-0 p-2">
 
@@ -175,7 +167,7 @@
                                             <div class="form-group row">
                                                 <div class="col-12">
                                                     <fieldset class="checkbox">
-                                                        <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <div class="vs-checkbox-con vs-checkbox-success">
                                                         <input type="checkbox" checked>
                                                         <span class="vs-checkbox">
                                                             <span class="vs-checkbox--check">
@@ -196,8 +188,8 @@
                                  
 
                                   
-                                  <a href="login" class="btn btn-outline-primary float-left btn-inline mb-50">Login</a>
-                                  <button type="submit" class="btn btn-primary float-right btn-inline mb-50">Register</a>
+                                  <a href="login" class="btn btn-outline-success float-left btn-inline mb-50">Login</a>
+                                  <button type="submit" class="btn btn-success float-right btn-inline mb-50">Register</a>
                               </form>
                           </div>
                       </div>

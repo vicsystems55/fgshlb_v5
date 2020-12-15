@@ -21,7 +21,7 @@
             </ul>
             <ul class="nav navbar-nav bookmark-icons">
               <li class="nav-item d-none d-lg-block">
-                  <h4 class="text-center">{{Auth::user()->role}} Dashboard</h4>
+                  <h4 class="text-center"> Dashboard: {{Auth::user()->role}} </h4>
                
                 </a>
               </li>
@@ -68,7 +68,7 @@
               <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                 <li class="dropdown-menu-header">
                   <div class="dropdown-header m-0 p-2">
-                    <h3 class="white">5 New</h3><span class="grey darken-2">App Notifications</span>
+                    <h3 class="white">0 New</h3><span class="grey darken-2">App Notifications</span>
                   </div>
                 </li>
                 <li class="scrollable-container media-list">
@@ -89,6 +89,7 @@
                         <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">9 hours
                           ago</time></small>
                     </div>
+
                   </a><a class="d-flex justify-content-between" href="javascript:void(0)">
                     <div class="media d-flex align-items-start">
                       <div class="media-left"><i class="feather icon-download-cloud font-medium-5 success"></i></div>
@@ -99,6 +100,7 @@
                         <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">5 hour
                           ago</time></small>
                     </div>
+
                   </a><a class="d-flex justify-content-between" href="javascript:void(0)">
                     <div class="media d-flex align-items-start">
                       <div class="media-left"><i class="feather icon-alert-triangle font-medium-5 danger"></i></div>
@@ -143,11 +145,12 @@
                     width="40" /></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="javascript:void(0)"><i
-                    class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="javascript:void(0)"><i
-                    class="feather icon-mail"></i> My
-                  Inbox</a><a class="dropdown-item" href="javascript:void(0)"><i class="feather icon-check-square"></i>
-                  Task</a><a class="dropdown-item" href="javascript:void(0)"><i class="feather icon-message-square"></i>
-                  Chats</a>
+                    class="feather icon-user"></i> Profile</a>
+                    
+                    
+                  
+                
+
                 <div class="dropdown-divider"></div><a class="dropdown-item" href="{{route('log_me_out')}}"><i
                     class="feather icon-power"></i> Logout</a>
               </div>

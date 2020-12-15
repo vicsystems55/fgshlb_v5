@@ -44,12 +44,15 @@ class UsersPageController extends Controller
             'pageHeader' => true
         ];
 
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         $user_logs = ActivityLog::latest()->where('action_by', Auth::user()->id)->where('title','!=', 'User Authentication')->get();
         $application_stage = ApplicationStage::where('user_id', Auth::user()->id)->first();
         return view('pages.user-dashboard', [
             'pageConfigs' => $pageConfigs,
             'application_stage' => $application_stage,
-            'user_logs' => $user_logs
+            'user_logs' => $user_logs,
+            'notifications' => $notifcations
         ]);
     }
 
@@ -71,6 +74,8 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
         
         $user_id = Auth::user()->id;
 
@@ -87,6 +92,7 @@ class UsersPageController extends Controller
         if($personal_data && $personal_data->bio_state =='done'){
 
             return view('pages.user.profile2_final', [
+                'notifications' => $notifcations,
                 'pageConfigs' => $pageConfigs,
                 'fed_min' => $fed_min,
                 'parastatals' => $parastatals,
@@ -97,6 +103,7 @@ class UsersPageController extends Controller
         }else{
 
             return view('pages.user.profile2', [
+                'notifications' => $notifcations,
                 'pageConfigs' => $pageConfigs,
                 'fed_min' => $fed_min,
                 'parastatals' => $parastatals,
@@ -113,6 +120,8 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
         
         $user_id = Auth::user()->id;
 
@@ -129,6 +138,7 @@ class UsersPageController extends Controller
         if($personal_data && $personal_data->apoint_state =='done'){
 
             return view('pages.user.profile22_final', [
+                'notifications' => $notifcations,
                 'pageConfigs' => $pageConfigs,
                 'fed_min' => $fed_min,
                 'parastatals' => $parastatals,
@@ -139,6 +149,7 @@ class UsersPageController extends Controller
         }else{
 
             return view('pages.user.profile22', [
+                'notifications' => $notifcations,
                 'pageConfigs' => $pageConfigs,
                 'fed_min' => $fed_min,
                 'parastatals' => $parastatals,
@@ -158,6 +169,8 @@ class UsersPageController extends Controller
             'pageHeader' => true
         ];
 
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         $user_id = Auth::user()->id;
 
         $user_data = User::find($user_id);
@@ -175,6 +188,7 @@ class UsersPageController extends Controller
             if($personal_data->appoint_state =="done"){
 
                 return view('pages.user.ministry_final', [
+                    'notifications' => $notifcations,
                     'pageConfigs' => $pageConfigs,
                     'fed_min' => $fed_min,
                     'parastatals' => $parastatals,
@@ -185,6 +199,7 @@ class UsersPageController extends Controller
             }else{
 
                 return view('pages.user.ministry', [
+                    'notifications' => $notifcations,
                     'pageConfigs' => $pageConfigs,
                     'fed_min' => $fed_min,
                     'parastatals' => $parastatals,
@@ -205,6 +220,8 @@ class UsersPageController extends Controller
             'pageHeader' => true
         ];
 
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         $user_id = Auth::user()->id;
 
         $user_data = User::find($user_id);
@@ -223,6 +240,7 @@ class UsersPageController extends Controller
         if($personal_data->appoint_state =="done"){
 
             return view('pages.user.military_final', [
+                'notifications' => $notifcations,
                 'pageConfigs' => $pageConfigs,
                 'fed_min' => $fed_min,
                 'parastatals' => $parastatals,
@@ -233,6 +251,7 @@ class UsersPageController extends Controller
         }else{
 
             return view('pages.user.military', [
+                'notifications' => $notifcations,
                 'pageConfigs' => $pageConfigs,
                 'fed_min' => $fed_min,
                 'parastatals' => $parastatals,
@@ -250,6 +269,9 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         $user_id = Auth::user()->id;
 
         $fed_min = FederalMinistry::all();
@@ -288,6 +310,7 @@ class UsersPageController extends Controller
         
 
         return view('pages.user.uploads_new', [
+            'notifications' => $notifcations,
             'pageConfigs' => $pageConfigs,
             'fed_min' => $fed_min,
             'parastatals' => $parastatals,
@@ -310,6 +333,9 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         $user_id = Auth::user()->id;
 
         $personal_data = PersonalInfo::where('user_id', $user_id)->first();
@@ -320,6 +346,8 @@ class UsersPageController extends Controller
 
 
         return view('pages.user.view_profile_submit', [
+            'notifications' => $notifcations,
+
             'pageConfigs' => $pageConfigs,
 
             'user_doc' => $user_doc,
@@ -334,6 +362,9 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         $user_id = Auth::user()->id;
 
         $personal_data = PersonalInfo::where('user_id', $user_id)->first();
@@ -344,6 +375,7 @@ class UsersPageController extends Controller
 
         
         return view('pages.user.view_profile', [
+            'notifications' => $notifcations,
             'pageConfigs' => $pageConfigs,
             'user_passport' => $user_passport,
             'user_doc' => $user_doc,
@@ -357,7 +389,10 @@ class UsersPageController extends Controller
             'pageHeader' => true
         ];
 
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         return view('pages.user.uploads_new', [
+            'notifications' => $notifcations,
             'pageConfigs' => $pageConfigs
         ]);
     }
@@ -366,6 +401,10 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
+
         $user_id = Auth::user()->id;
         $personal_data = PersonalInfo::where('user_id', $user_id)->first(); 
         $level = $personal_data->level;
@@ -373,6 +412,7 @@ class UsersPageController extends Controller
         $ceiling = LoanCeiling::where('grade_level', $level)->first();
         $countLoan = LoanApplication::where('user_id', $user_id)->count();
         return view('pages.user.userloans', [
+            'notifications' => $notifcations,
             'pageConfigs' => $pageConfigs,
             'countLoan' => $countLoan,
             'ceiling' => $ceiling
@@ -383,12 +423,15 @@ class UsersPageController extends Controller
         $pageConfigs = [
             'pageHeader' => true
         ];
+
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
        
         $user_id = Auth::user()->id;
         
         $loan_types = LoanType::all();
 
         return view('pages.user.loan_application', [
+            'notifications' => $notifcations,
             'pageConfigs' => $pageConfigs,
             'loan_types' => $loan_types,
             'ceiling' => $ceiling
