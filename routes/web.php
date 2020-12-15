@@ -20,7 +20,11 @@
 
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 
-Route::get('/', 'DashboardController@dashboardAnalytics');
+Route::get('/', function(){
+  return redirect('/login');
+});
+
+
 
 // Route Dashboards
 Route::get('/dashboard-analytics', 'DashboardController@dashboardAnalytics');
