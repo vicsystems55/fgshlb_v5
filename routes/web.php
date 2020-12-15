@@ -75,6 +75,10 @@ Route::group(['middleware' => ['auth','es'], 'prefix' => 'es'], function(){
 
   Route::get('/settings', 'ESPageController@settings')->name('es.settings');
 
+  Route::post('/esregistry/approve', 'ESRegistryConfirmation@es_approve')->name('es.approve');
+
+  Route::post('/esregistry/disapprove', 'ESRegistryConfirmation@es_disapprove')->name('es.disapprove');
+
 });
 
 

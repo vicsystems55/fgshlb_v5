@@ -47,7 +47,7 @@ class ESPageController extends Controller
             'pageHeader' => true
         ];
 
-        $submitted_records = ApplicationStage::with('users','personalinfo')->get();
+        $submitted_records = ApplicationStage::with('users','personalinfo')->latest()->get();
 
         
 

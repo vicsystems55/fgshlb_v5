@@ -28,6 +28,8 @@ use App\LoanCeiling;
 
 use App\ActivityLog;
 
+use App\Notification;
+
 
 
 class UsersPageController extends Controller
@@ -57,8 +59,11 @@ class UsersPageController extends Controller
             'pageHeader' => true
         ];
 
+        $notifcations = notification::where('user_id', Auth::user()->id)->get();
+
         return view('pages.user.notifications', [
-            'pageConfigs' => $pageConfigs
+            'pageConfigs' => $pageConfigs,
+            'notifications' => $notifcations
         ]);
     }
 

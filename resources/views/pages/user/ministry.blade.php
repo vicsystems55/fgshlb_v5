@@ -73,10 +73,39 @@
                                                 <option value=""></option>
                                                 
                                             <option value="{{$personal_data->parastal??''}}">{{$personal_data->parastal??''}}</option>
-
+                                            <option value="" >ABUJA CHAMBER OF COMMERCE, INDUSTRY, MINES & AGRICULTURE</option>
+<option value="" >ABUJA CHIEF MAGISTRATE COURT</option>
+<option value="" >ABUJA COUNCIL FOR ARTS AND CULTUR</option>
+<option value="" >ABUJA ENVIRONMENTAL PROTECTION BOARD</option>
+<option value="" >ABUJA HIGH COURT OF JUSTICE</option>
+<option value="" >ABUJA INVESTMENT AND PROPERTY DEV. CO. LTD.</option>
+<option value="" >ABUJA MUNICIPAL AREA COUNCIL</option>
+<option value="" >ABUJA URBAN MASS TRANSIT COMPANY</option>
+<option value="" >ADMINISTRATIVE STAFF COLLEGE OF NIGERIA (ASCON)</option>
+<option value="" >ALUMINUM SMELTING CO. OF NIGERIA LTD. (ALSCON)</option>
+<option value="" >AREA COUNCIL SERVICE BOAR</option>
+<option value="" >AREA COUNCIL STAFF PENSION BOARD</option>
+<option value="" >ARMY RESERVE RECRUITMENT AND RESETTLEMENT CENTRE</option>
+<option value="" >CALABAR EXPORT PROCESSING ZONES AUTHORITY (CEPZ)</option>
+<option value="" >CENTRE FOR DISTANT LEARNING & CONTINUING EDUCATION</option>
+<option value="" >CENTRAL BANK OF NIGERIA (CBN)</option>
+<option value="" >CHRISTIAN WELFARE PILGRIMS BOARD</option>
+<option value="" >CODE OF CONDUCT BUREAU</option>
+<option value="" >COMMITTEE ON DEVOLUTION OF POWER</option>
+<option value="" >BETWEEN FEDERAL STATES AND LOCAL GOVERNMENTS</option>
+<option value="" >COMMITTEE ON VISION 2010 PROGRAMME</option>
+<option value="" >CORPORATE AFFAIRS COMMISSION</option>
+<option value="" >COUNCIL OF LEGAL EDUCATION</option>
+<option value="" >DAILY TIMES OF NIGERIA PL</option>
+<option value="" >DEPARTMENT OF IMMIGRATION SERVICES</option>
+<option value="" >NATIONAL CIVIL REGISTRATION</option>
+<option value="" >DEPARTMENT OF SOIL EROSION & FLOOD CONTROL</option>
+<option value="" >DEPARTMENT OF STATES & LOCAL GOVERNMENTS AFFAIRS</option>
                                                 @foreach($parastatals as $p)
 
                                                 <option value="{{$p->name}}">{{$p->name}}</option>
+
+
 
                                                 @endforeach
                                                 </select>

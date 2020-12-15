@@ -18,18 +18,15 @@
                       </div>
                       <div class="modal-body">
 
-                        <form action="">
-
-                        <input type="hidden" name="applicant_user_id" value="{{$applicant_profile->users->id}}">
-
-
-                      <textarea class="form-control" name="message" id="" cols="30" rows="6"></textarea>
-                        
+                        <form method="post" action="{{route('es.approve')}}">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{$applicant_profile->users->id}}">
+                                <textarea class="form-control" name="msg" id="" cols="30" rows="6"></textarea>
                         
 
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Submit</button>
+                        <button type="submit" class="btn btn-warning" data-dismiss="modal">Submit</button>
                       </div>
 
                       </form>
