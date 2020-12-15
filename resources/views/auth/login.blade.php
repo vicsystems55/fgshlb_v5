@@ -12,7 +12,7 @@
   <div class="col-md-7 mx-auto">
     <div class="card bg-authentication rounded-0 mb-0">
       <div class="row m-0">
-        <div class="col-lg-6 d-lg-block d-none text-center align-self-center px-1 py-0">
+        <div class="col-lg-6 text-center align-self-center px-1 py-0">
 
           <img class="img-fluid" src="{{ asset('images/pages/login2.png') }}" alt="branding logo">
 
