@@ -13,7 +13,10 @@
     <div class="card bg-authentication rounded-0 mb-0">
       <div class="row m-0">
         <div class="col-lg-6 d-lg-block d-none text-center align-self-center px-1 py-0">
-          <img src="{{ asset('images/pages/login.png') }}" alt="branding logo">
+
+          <img class="img-fluid" src="{{ asset('images/pages/login2.png') }}" alt="branding logo">
+
+          
 
           
         </div>
@@ -76,14 +79,14 @@
                       </fieldset>
                     </div>
                     @if (Route::has('password.request'))
-                    <div class="text-right"><a class="card-link" href="{{ route('password.request') }}">
+                    <div class="text-right"><a class="card-link text-secondary" href="{{ route('password.request') }}">
                         Forgot Password?
                       </a></div>
                     @endif
 
                   </div>
-                  <a href="register" class="btn btn-outline-primary float-left btn-inline">Register</a>
-                  <button type="submit" class="btn btn-primary float-right btn-inline">Login</button>
+                  <a href="register" class="btn btn-outline-success float-left btn-inline">Register</a>
+                  <button type="submit" class="btn btn-success float-right btn-inline">Login</button>
                 </form>
               </div>
             </div>
