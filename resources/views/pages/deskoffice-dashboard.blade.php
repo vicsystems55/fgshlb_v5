@@ -28,8 +28,8 @@
               </div>
             </div>
             <div class="text-center">
-              <h1 class="mb-2 text-white">Welcome to Desk Office,</h1>
-              <p class="m-auto w-75">You elevated permissions to handle Military Loans</p>
+              <h1 class="mb-2 text-white">Welcome Head of Operations</h1>
+              <p class="m-auto w-75">You elevated permissions to handle Desk office operations</p>
             </div>
           </div>
         </div>

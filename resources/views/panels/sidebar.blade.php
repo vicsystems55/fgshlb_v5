@@ -77,7 +77,7 @@
                 </li>
                 
                 <li class=" {{ (request()->is('user/notifications')) ? 'active' : '' }}  nav-item"><a href="{{ route('user.notifications')}}"><i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Notifications</span>
-                <span class="badge badge badge-warning badge-pill float-right">{{$notifications->count()}}</span>
+                <span class="badge badge badge-warning badge-pill float-right">0</span>
                 </a>
                 </li>
                

@@ -25,7 +25,7 @@ $configData = Helper::applClasses();
     <div class="header-navbar-shadow"></div>
 
     {{-- Include Navbar --}}
-    @include('panels.navbar')
+    @include('panels.dk-navbar')
 
     @if(($configData['contentLayout']!=='default') && isset($configData['contentLayout']))
     <div class="content-area-wrapper">
