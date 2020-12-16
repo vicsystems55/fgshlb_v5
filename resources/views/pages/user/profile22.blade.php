@@ -54,7 +54,7 @@
 
 
                             <div class="col-md-6 d-flex justify-content-center">
-                                <div  style="width:230px;"  class="card border-info text-center bg-transparent">
+                                <div  style="width:230px;"  class="card border-success text-center bg-transparent">
                                     <div class="card-content">
                                     
                                     <div style="height:90px" class="card-body">
@@ -65,7 +65,7 @@
                                     
                                     </div>
                                     <div class="card-footer">
-                                    <a href="{{route('user.ministry')}}" class="btn btn-primary">Select</a>
+                                    <a href="{{route('user.ministry')}}" class="btn btn-success">Select</a>
                                     </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                         
                             
                             <div class="col-md-6 d-flex justify-content-center">
-                                <div  style="width:230;"  class="card border-info text-center bg-transparent">
+                                <div  style="width:230;"  class="card border-success text-center bg-transparent">
                                     <div class="card-content">
                                     
                                     <div style="height:90px"  class="card-body">
@@ -85,7 +85,7 @@
                                     
                                     </div>
                                     <div class="card-footer">
-                                    <a href="{{route('user.military')}}" class="btn btn-primary">Select</a>
+                                    <a href="{{route('user.military')}}" class="btn btn-success">Select</a>
                                     </div>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
 
                         <div class="d-flex justify-content-center">
                             
-                            <a href="{{route('user.profile')}}" class="btn btn-outline-primary">Previous</a>
+                            <a href="{{route('user.profile')}}" class="btn btn-outline-success">Previous</a>
                        
                   </div>
 

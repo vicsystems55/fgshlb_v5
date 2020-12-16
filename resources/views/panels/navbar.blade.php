@@ -64,11 +64,11 @@
             </li>
             <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#"
                 data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span
-                  class="badge badge-pill badge-success badge-up">{{$notifications->count()}}</span></a>
+                  class="badge badge-pill badge-success badge-up"></span></a>
               <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                 <li class="dropdown-menu-header">
                   <div class="bg-success dropdown-header m-0 p-2">
-                    <h3 class="white">{{$notifications->count()}} New</h3><span class="text-white ">App Notifications</span>
+                    <h3 class="white">0 New</h3><span class="text-white ">App Notifications</span>
                   </div>
                 </li>
                 <li class="scrollable-container media-list">

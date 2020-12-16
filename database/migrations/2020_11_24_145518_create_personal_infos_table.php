@@ -46,7 +46,7 @@ class CreatePersonalInfosTable extends Migration
             $table->string('fileNO')->nullable();  //auto generated after es confirms
             $table->string('reason')->nullable();  //upload
             $table->bigInteger('user_id')->unsigned(); //upload
-            $table->bigInteger('docs_id')->unsigned(); //upload
+            $table->bigInteger('docs_id')->unsigned()->nullable(); //upload
             $table->bigInteger('pension_fund_id')->unsigned()->nullable(); // pension fund table id
             $table->string('pension_commission')->nullable();
             $table->string('pension_no')->nullable();

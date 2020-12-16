@@ -20,6 +20,22 @@
                 <span class="badge badge badge-warning badge-pill float-right"></span>
                 </a>
                 </li>
+
+                <style>
+                   .main-menu.menu-light .navigation > li.active > a {
+                    background: linear-gradient(118deg, #015A1A, rgba(33, 153, 12, 0.7));
+                    box-shadow: 0 0 10px 1px rgba(195, 251, 116, 0.9);
+                    color: #fff;
+                    font-weight: 400;
+                    border-radius: 4px;
+                }
+
+                .main-menu.menu-light .navigation > li ul .active {
+                    background: linear-gradient(118deg, #015A1A, rgba(33, 153, 12, 0.7));
+                    box-shadow:  0 0 10px 1px rgba(195, 251, 116, 0.9);
+                    border-radius: 4px;
+                }
+                </style>
                
                 <!-- <li class=" nav-item"><a href="#"><i class="feather icon-book"></i><span class="menu-title" data-i18n="Starter kit">Compensation Plan</span></a>
                     <ul class="menu-content">

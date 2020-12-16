@@ -47,7 +47,7 @@
             <div  class="card-body pb-1">
               <ul class="activity-timeline timeline-left list-unstyled">
 
-               @foreach($user_logs as $log)
+               @forelse($user_logs as $log)
 
                <li>
                   <div class="timeline-icon bg-primary">
@@ -62,8 +62,12 @@
                   <small class="text-muted">{{$log->created_at->diffForHumans()}}</small>
                 </li>
 
+              @empty
 
-               @endforeach
+                <h4 class="text-center">No Records yet...</h4>
+
+
+               @endforelse
               
                
                

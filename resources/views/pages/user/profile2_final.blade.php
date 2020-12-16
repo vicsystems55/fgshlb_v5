@@ -36,7 +36,7 @@
           <div class="card">
               <div class="card-header bg-secondary p-2">
               <h3 class="card-title text-center">Biodata</h3>
-                  <h1 class="card-title text-center">Step 1/3 (COMPLETED)</h1>
+                  <h1 class="card-title text-center">Step 1/4 (COMPLETED)</h1>
                   
               </div>
               <div class="card-content">
