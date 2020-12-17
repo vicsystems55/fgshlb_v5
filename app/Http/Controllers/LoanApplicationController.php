@@ -37,7 +37,7 @@ class LoanApplicationController extends Controller
         $person = PersonalInfo::where('user_id', $user_id)->first(); 
 
         // now check if person is verified by es.
-        if($person->status == "unverified") {
+        if($person->status == "l") {
 
             
 
@@ -48,7 +48,7 @@ class LoanApplicationController extends Controller
 
         }
 
-        else if($person->status == "verified") {
+        else {
 
             $countLoan = LoanApplication::where('user_id', $user_id)->count();
 

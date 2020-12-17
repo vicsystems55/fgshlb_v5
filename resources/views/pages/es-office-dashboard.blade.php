@@ -1,6 +1,6 @@
-@extends('layouts/dk-contentLayoutMaster')
+@extends('layouts/es-office-contentLayoutMaster')
 
-@section('title', 'Dashboard Analytics')
+@section('title', 'Dashboard')
 
 @section('vendor-style')
 <!-- vendor css files -->
@@ -17,19 +17,18 @@
 <section id="dashboard-analytics">
   <div class="row">
     <div class="col-lg-6 col-md-12 col-sm-12">
-      <div class="card bg-analytics text-white">
+      <div class="card bg-warning text-white">
         <div class="card-content">
           <div class="card-body text-center">
-            <img src="{{ asset('images/elements/decore-left.png') }}" class="img-left" alt="card-img-left">
-            <img src="{{ asset('images/elements/decore-right.png')}}" class="img-right" alt="card-img-right">
+            
             <div class="avatar avatar-xl bg-primary shadow mt-0">
               <div class="avatar-content">
                 <i class="feather icon-award white font-large-1"></i>
               </div>
             </div>
             <div class="text-center">
-              <h1 class="mb-2 text-white">Welcome Desk Officer</h1>
-              <p class="m-auto w-75">You elevated permissions to handle Desk office operations</p>
+              <h1 class="mb-2 text-white">Welcome Hon, {{Auth::user()->firstname}} {{Auth::user()->surname}} </h1>
+              
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@
 
   
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-12">
       <div class="card">
         <div class="card-header">
           <h4 class="mb-0">Recently Submitted</h4>
@@ -239,51 +238,6 @@
         </div>
       </div>
     </div>
-
-
-    <div class="col-lg-4 col-md-6 col-12">
-                <div style="height: 270.556px;"  class="card overflow-auto">
-                    <div class="card-header">
-                        <h4 class="card-title">Notifications</h4>
-                    </div>
-                        <div class="card-content  ">
-                            <div  class="card-body pb-1">
-                                <ul class="activity-timeline timeline-left list-unstyled">
-
-                             
-
-                                <li>
-                                    <div class="timeline-icon bg-primary">
-                                        <i class="feather icon-check font-medium-2 align-middle"></i>
-                                    </div>
-                                    <div class="timeline-info">
-                                        <p class="font-weight-bold mb-0"></p>
-                                        <span class="font-small-3">
-                                        
-                                        </span>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                    </li>
-
-
-                            
-                                
-                                
-                                
-
-                                    
-                                    
-                                
-                                </ul>
-                            </div>
-
-                
-                        </div>
-                </div>
-        
-            </div>
-
-
   </div>
 </section>
 <!-- Dashboard Analytics end -->

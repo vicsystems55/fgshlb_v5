@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 
+use Auth;
+
 class ESOfficeMiddleware
 {
     /**
@@ -15,6 +17,14 @@ class ESOfficeMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if(Auth::check() && Auth::user()->role == "EsOffice"){
+
+            return $next($request); 
+            }
+
+            else{
+
+                abort(403);
+            }
     }
 }

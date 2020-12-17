@@ -120,6 +120,20 @@ Route::group(['middleware' => ['auth','accounts'], 'prefix' => 'accounts'], func
 });
 
 
+Route::group(['middleware' => ['auth','head_of_operations'], 'prefix' => 'head_operations'], function(){
+
+  Route::get('/', 'HeadOfOperationsPageController@index')->name('head_operations.home');
+
+});
+
+
+Route::group(['middleware' => ['auth','es_office'], 'prefix' => 'es_office'], function(){
+
+  Route::get('/', 'ESOfficePageController@index')->name('es_office.home');
+
+});
+
+
 
 Route::group(['middleware' => ['auth','user'], 'prefix' => 'user'], function(){
 

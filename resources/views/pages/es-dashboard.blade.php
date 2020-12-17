@@ -83,47 +83,47 @@
       </div>
       <div class="row">
          
-          <div class="col-lg-4 col-md-6 col-12">
-          <div style="height: 270.556px;"  class="card overflow-auto">
-          <div class="card-header">
-            <h4 class="card-title">Account Status</h4>
-          </div>
-          <div class="card-content  ">
-            <div  class="card-body pb-1">
-              <ul class="activity-timeline timeline-left list-unstyled">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div style="height: 270.556px;"  class="card overflow-auto">
+                    <div class="card-header">
+                        <h4 class="card-title">Account Status</h4>
+                    </div>
+                        <div class="card-content  ">
+                            <div  class="card-body pb-1">
+                                <ul class="activity-timeline timeline-left list-unstyled">
 
-               @foreach($user_logs as $log)
+                                @foreach($user_logs as $log)
 
-               <li>
-                  <div class="timeline-icon bg-primary">
-                    <i class="feather icon-check font-medium-2 align-middle"></i>
-                  </div>
-                  <div class="timeline-info">
-                    <p class="font-weight-bold mb-0">{{$log->title}}</p>
-                    <span class="font-small-3">
-                      {{$log->log}}
-                    </span>
-                  </div>
-                  <small class="text-muted">{{$log->created_at->diffForHumans()}}</small>
-                </li>
+                                <li>
+                                    <div class="timeline-icon bg-primary">
+                                        <i class="feather icon-check font-medium-2 align-middle"></i>
+                                    </div>
+                                    <div class="timeline-info">
+                                        <p class="font-weight-bold mb-0">{{$log->title}}</p>
+                                        <span class="font-small-3">
+                                        {{$log->log}}
+                                        </span>
+                                    </div>
+                                    <small class="text-muted">{{$log->created_at->diffForHumans()}}</small>
+                                    </li>
 
 
-               @endforeach
-              
-               
-               
+                                @endforeach
+                                
+                                
+                                
+
+                                    
+                                    
+                                
+                                </ul>
+                            </div>
 
                 
-                
-               
-              </ul>
+                        </div>
+                </div>
+        
             </div>
-
-        
-          </div>
-        </div>
-        
-      </div>
           </div>
       </div>
      

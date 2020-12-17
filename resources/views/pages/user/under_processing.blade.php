@@ -20,7 +20,7 @@
       <div class="card-conten">
         <div class="card-body text-center">
           <img width="120" height="312000" src="{{ asset('images/pages/confirmed.png') }}" class="img-fluid align-self-center" alt="branding logo">
-          <h1 class="font-large-2 my-2">Application Under Process... </h1>
+          <h1 class="font-large-2 my-2">Application Under Processing... </h1>
           <p class="">
            Data has been submitted successfully
           </p>
@@ -30,7 +30,7 @@
               </div>
           </p>
           
-          <a class="btn btn-success btn-lg mt-2" href="{{route('user')}}">Back to Dashboard</a>
+          <a class="btn btn-success btn-lg mt-2" href="{{route('user.userloans')}}">Proceed to Loan Application</a>
         </div>
       </div>
     </div>

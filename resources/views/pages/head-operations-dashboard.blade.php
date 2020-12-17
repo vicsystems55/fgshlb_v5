@@ -1,6 +1,6 @@
-@extends('layouts/dk-contentLayoutMaster')
+@extends('layouts/head-operations-contentLayoutMaster')
 
-@section('title', 'Dashboard Analytics')
+@section('title', 'Dashboard')
 
 @section('vendor-style')
 <!-- vendor css files -->
@@ -28,7 +28,7 @@
               </div>
             </div>
             <div class="text-center">
-              <h1 class="mb-2 text-white">Welcome Desk Officer</h1>
+              <h1 class="mb-2 text-white">Welcome to Head of Operations Office</h1>
               <p class="m-auto w-75">You elevated permissions to handle Desk office operations</p>
             </div>
           </div>
@@ -71,7 +71,7 @@
 
   
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-12">
       <div class="card">
         <div class="card-header">
           <h4 class="mb-0">Recently Submitted</h4>
@@ -239,51 +239,6 @@
         </div>
       </div>
     </div>
-
-
-    <div class="col-lg-4 col-md-6 col-12">
-                <div style="height: 270.556px;"  class="card overflow-auto">
-                    <div class="card-header">
-                        <h4 class="card-title">Notifications</h4>
-                    </div>
-                        <div class="card-content  ">
-                            <div  class="card-body pb-1">
-                                <ul class="activity-timeline timeline-left list-unstyled">
-
-                             
-
-                                <li>
-                                    <div class="timeline-icon bg-primary">
-                                        <i class="feather icon-check font-medium-2 align-middle"></i>
-                                    </div>
-                                    <div class="timeline-info">
-                                        <p class="font-weight-bold mb-0"></p>
-                                        <span class="font-small-3">
-                                        
-                                        </span>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                    </li>
-
-
-                            
-                                
-                                
-                                
-
-                                    
-                                    
-                                
-                                </ul>
-                            </div>
-
-                
-                        </div>
-                </div>
-        
-            </div>
-
-
   </div>
 </section>
 <!-- Dashboard Analytics end -->

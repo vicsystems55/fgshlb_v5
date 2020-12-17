@@ -16,6 +16,27 @@ class ChooseRoleController extends Controller
             return redirect('/superadmin');
         }
 
+        elseif (Auth::user()->role =='EsOffice') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/es_office');
+        }
+
+
+        elseif (Auth::user()->role =='HeadOfOperations') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/head_operations');
+        }
+
         elseif (Auth::user()->role =='Applicant') {
 
             ActivityLog::create([

@@ -224,6 +224,45 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
 
+            [
+                'id' => '8888',
+                'firstname' => 'Ibrahim',
+                'surname' => 'Mairiga',
+                'email' => 'executivesecretary@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('executivesecretary2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'EsOffice',
+                'type' => 'standard',
+                'ippis_no' => '*****',
+                'file_no' => 'FGSHLB-2020-****',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '9999',
+                'firstname' => 'S',
+                'surname' => 'S',
+                'email' => 'headofoperqations@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('headofoperations2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'HeadOfOperations',
+                'type' => 'standard',
+                'ippis_no' => '*****##',
+                'file_no' => 'FGSHLB-2020-****##',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
 
         ]);
     }

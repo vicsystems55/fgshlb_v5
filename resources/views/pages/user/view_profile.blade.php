@@ -18,16 +18,20 @@
 
             <div class="container-fluid">
                 <div class="card">
-                <div class="card-header">
+                <div class="card-heade pt-1">
                     @if($user_doc->count()>= 7 && $personal_data)
 
-                    <form style="width:100%;" method="post" action="{{route('user.registry_submit')}}">
+                    <form class="col-md-5 mx-auto" style="width:100%;" method="post" action="{{route('user.registry_submit')}}">
                     @csrf
                         <input type="hidden" name="pinfo_slug" value="{{$personal_data->slug}}">
                     <div class="form-group">
-                    <button  class="btn btn-block btn-primary shadow" >Submit To Registra</button>
+                    <button  class="btn btn-lg btn-block btn-success shadow" >Submit</button>
                     </div>
                     </form>
+
+                    <div class="q text-center">
+                    <a class="btn btn-secondary shadow" href="{{route('user.profile')}}">Edit Information?</a>
+                    </div>
 
                     
 
@@ -39,12 +43,14 @@
 
                     
 
-                                <h4 class="text-center mt-2 p-1">Biodata</h4>
+                               
                                     @if($personal_data->bio_state == 'done')
 
                                     <div class="d-flex justify-content-center">
-                                    <img style="widht:120px; height:120px;" class="img-thumbnail img-fluid shadow border mb-2" src="{{config('app.url')}}/{{$user_passport->doc_url??''}}" alt="passport">
+                                    <img style="widht:120px; height:120px;" class="img-thumbnail img-fluid shadow border mb-2" src="{{config('app.url')}}/{{$user_passport->doc_url??'images/uploads_placeholder/passport.jpg'}}" alt="passport">
                                     </div>
+
+                                    <h4 class="text-center mt-2 p-1">Biodata</h4>
 
                                     <div class="row">
                                         <div class="col-md-5">

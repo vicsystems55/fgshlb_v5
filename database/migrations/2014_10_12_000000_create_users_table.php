@@ -20,13 +20,13 @@ class CreateUsersTable extends Migration
             $table->string('surname');
             $table->string('role')->default('Applicant');
             $table->string('type')->default('standard');
-            $table->string('status')->default('unverified');
+            $table->string('status')->default('verified');
             $table->string('email')->unique();
             $table->string('avatar')->default('avatar.png');
             $table->string('req2fa')->default('no');
             $table->string('file_no')->unique();
-            $table->string('nin')->unique();
-            $table->string('work_place');
+            $table->string('nin')->unique()->nullable();
+            $table->string('work_place')->nullable();
             $table->string('ippis_no')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

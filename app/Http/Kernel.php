@@ -65,6 +65,8 @@ class Kernel extends HttpKernel
         'superadmin' => \App\Http\Middleware\SuperAdminMiddleware::class,
         'deskoffice' => \App\Http\Middleware\DeskOfficeMiddleware::class,
         'es' => \App\Http\Middleware\ESMiddleware::class,
+        'es_office' => \App\Http\Middleware\ESOfficeMiddleware::class,
+        'head_of_operations' => \App\Http\Middleware\HeadOfOperationsMiddleware::class,
         'user' => \App\Http\Middleware\UserMiddleware::class,
         'application_stage' => \App\Http\Middleware\ApplicationStageMiddleware::class,
 

@@ -66,7 +66,7 @@ class CreateLoanApplicationsTable extends Migration
             $table->string('balance')->nullable(); //upload
             $table->string('conditions')->nullable(); //upload
             $table->string('deskoffice')->nullable(); //upload
-            $table->double('totalpayback');
+            $table->double('totalpayback')->nullable();
 
             //other income
             $table->string('amountincome')->nullable(); //upload

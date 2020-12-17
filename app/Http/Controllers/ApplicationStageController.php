@@ -38,6 +38,8 @@ class ApplicationStageController extends Controller
 
         $pinfo = PersonalInfo::where('slug', $request->pinfo_slug)->first();
 
+       
+
             if($pinfo->bio_state =='done' && $pinfo->appoint_state =='done'){
 
                 $application_stage = ApplicationStage::Create([
@@ -53,9 +55,21 @@ class ApplicationStageController extends Controller
                     'log' => 'Application submitted to ES Registry successfully'
                 ]);
 
-                $registry_accounts = User::where('role', 'ES-Registry')->get();
+                $registry_accounts = User::where('role', 'Desk-Officer')->get();
 
-                    foreach($registry_accounts as $accounts){
+                $head_operations = User::where('role', 'HeadOfOperations')->first();
+
+
+                ActivityLog::create([
+                    'action_by' => $head_operations->id,
+                    'title' => 'New Application Received',
+                    'log' => 'A New Applicant has submitted for processing'
+                ]);
+
+
+
+
+                    foreach($deskofficers_accounts as $accounts){
                             
                         ActivityLog::create([
                             'action_by' => $accounts->id,
