@@ -17,6 +17,16 @@
 <section id="dashboard-analytics">
 
                 <div class="card">
+                <div class="card-heade pt-1">
+                    
+                   
+
+                    <div class="q text-center">
+                    <a class="btn btn-secondary shadow" href="{{route('loan_success')}}">Submit Loan Application</a>
+                    </div>
+
+             
+                </div>
                     <div class="card-body">
 
                     <h4>Biodata</h4>

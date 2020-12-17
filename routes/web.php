@@ -245,6 +245,9 @@ Route::get('getLoanDocuments/{filename}', [DocumentUploadController::class,'getP
 Route::view('/spinner', 'pages.user.under_processing');
 
 
+Route::view('/loan_success', 'pages.user.loan_success')->name('loan_success');
+
+
 Route::view('/all_forms', 'pages.user.all_forms');
 
 Route::view('/print_out', 'pages.user.print_out');
