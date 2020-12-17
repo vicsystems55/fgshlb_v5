@@ -84,7 +84,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$user_passport->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="passport_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$user_passport->doc_url??'/images/uploads_placeholder/passport.jpg'}}); background-size:cover; width: 120px; height:120px;" id="passport_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -92,7 +92,7 @@
 
                                         <div class="form-group   mt-2 mx-auto ">
                                         
-                                            <button onclick="openFileOption4(this.id)" id="passport"  class=" {{$user_passport?'d-none':''}} btn btn-info shadow">Choose</button>
+                                            <button onclick="openFileOption4(this.id)" id="passport"  class=" {{$user_passport?'d-none':''}} btn btn-info shadow">Choose File</button>
                                         </div>
                         
                                         
@@ -100,7 +100,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2 class="{{$user_passport?'text-white':''}}">Passport Photograph</h2>
+                                        <h4 class="{{$user_passport?'text-white':''}}">Passport Photograph</h4>
                                         <ul>
                                             <li>Pixels: 340 x 340</li>
                                             <li>File size limit: 120kb</li>
@@ -171,7 +171,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$first_appoint->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:300px;" id="first_appoint_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$first_appoint->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="first_appoint_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -187,7 +187,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>First Appointment Gezzete Paper or Letter</h2>
+                                        <h4>First Appointment Gezzete Paper or Letter</h4>
                                         <ul>
                                             <li>Size 340 x 340</li>
                                             <li>Size 340 x 340</li>
@@ -260,7 +260,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$confirmation_gezzete->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="confirmation_gezzete_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$confirmation_gezzete->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="confirmation_gezzete_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -276,7 +276,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>Confirmation of Appointment Gezzete</h2>
+                                        <h4>Confirmation of Appointment Gezzete</h4>
                                         <ul>
                                             <li>Size 340 x 340</li>
                                             <li>Size 340 x 340</li>
@@ -349,7 +349,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$next_of_kin->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="next_of_kin_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$next_of_kin->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="next_of_kin_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -365,7 +365,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>Next of Kin</h2>
+                                        <h4>Next of Kin</h4>
                                         <h3>Instructions</h3>
                                         <ul>
                                             <li>Size 340 x 340</li>
@@ -441,7 +441,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$pay_slip->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="pay_slip_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$pay_slip->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="pay_slip_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -457,7 +457,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>Pay Slip</h2>
+                                        <h4>Pay Slip</h4>
                                         <ul>
                                             <li>Size 340 x 340</li>
                                             <li>Size 340 x 340</li>
@@ -529,7 +529,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$id_card->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="id_card_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$id_card->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="id_card_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -545,7 +545,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>ID Card</h2>
+                                        <h4>ID Card</h4>
                                         <ul>
                                             <li>Size 340 x 340</li>
                                             <li>Size 340 x 340</li>
@@ -617,7 +617,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$pfa_letter->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="pfa_letter_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$pfa_letter->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="pfa_letter_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -633,7 +633,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>PENCOM PFA Letter</h2>
+                                        <h4>PENCOM PFA Letter</h4>
                                         <ul>
                                             <li>Size 340 x 340</li>
                                             <li>Size 340 x 340</li>
@@ -705,7 +705,7 @@
 
                                     
                                        
-                                        <div  style="background-image:url({{config('app.url')}}{{$change_of_name->doc_url??'/images/banner/banner-21.jpg'}}); background-size:cover; width: 250px; height:250px;" id="change_of_name_chooser_preview" class="shadow p-1">
+                                        <div  style="background-image:url({{config('app.url')}}{{$change_of_name->doc_url??'/images/banner/banner-2x.jpg'}}); background-size:cover; width: 120px; height:120px;" id="change_of_name_chooser_preview" class="shadow p-1">
                                 
                                         
 
@@ -721,7 +721,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2>Marriage Change of Name (If Any)</h2>
+                                        <h4>Marriage Change of Name (If Any)</h4>
                                         <ul>
                                             <li>Size 340 x 340</li>
                                             <li>Size 340 x 340</li>

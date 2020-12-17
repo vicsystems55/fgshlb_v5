@@ -20,9 +20,9 @@
       <div class="card-conten">
         <div class="card-body text-center">
           <img width="120" height="312000" src="{{ asset('images/pages/confirmed.png') }}" class="img-fluid align-self-center" alt="branding logo">
-          <h1 class="font-large-2 my-2">Profile Under Review... </h1>
+          <h1 class="font-large-2 my-2">Application Under Process... </h1>
           <p class="">
-           Your Application has been submitted and is under review. Please Stand by for more details
+           Data has been submitted successfully
           </p>
           <p>
           <div class="spinner-grow text-success" role="status">

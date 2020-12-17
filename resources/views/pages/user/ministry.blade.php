@@ -55,14 +55,14 @@
 
                                             <div class="ui-widget">
                                             <label for="ministy">Select Name of Ministry</label>
-                                            <input id="ministry" class="form-control" name="ministry"  placeholder="Enter name of Ministry">
+                                            <input id="ministry" class="form-control" name="ministry" value="{{$personal_data->ministry??''}}"  placeholder="Enter name of Ministry">
                                         
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                         <label for="">Select Parastatals</label>
-                                            <input type="text" class="form-control"  name="parastatal" placeholder="Enter name of parastatal" >
+                                            <input id="parastatals" type="text" class="form-control" value="{{$personal_data->parastatal??''}}"  name="parastatal" placeholder="Enter name of parastatal" >
                                         </div>
 
                                         <div class="form-group">
@@ -169,8 +169,8 @@
                                 </div>
                                 
                                 <div class="col-12 d-flex justify-content-between">
-                                <a href="{{route('user.profile2')}}" class="btn btn-primary shadow mr-1 mb-1">Previous</a> 
-                                      <button type="submit" class="btn btn-primary shadow mr-1 mb-1">Submit</button>
+                                <a href="{{route('user.profile2')}}" class="btn btn-success shadow mr-1 mb-1">Previous</a> 
+                                      <button type="submit" class="btn btn-success shadow mr-1 mb-1">Submit</button>
                                   </div>
                           
                       </form>
