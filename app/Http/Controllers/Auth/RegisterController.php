@@ -70,7 +70,9 @@ class RegisterController extends Controller
             'firstname' => ['required', 'string', 'max:255'],
             'middlename' => ['string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
+            'work_place' => ['required', 'string', 'max:255'],
             'ippis_no' => ['required', 'string', 'max:255','unique:users'],
+            'nin' => ['required', 'string', 'max:255','unique:users'],
             'dob' => ['after:'.$max_years, 'before:'.$least_years],
 
             'first_appoint' => ['after:'.$max_serve],
@@ -102,6 +104,8 @@ class RegisterController extends Controller
                 'middlename' => $data['middlename'],
                 'surname' => $data['surname'],
                 'ippis_no' => $data['ippis_no'],
+                'nin' => $data['nin'],
+                'work_place' => $data['work_place'],
                 'file_no' => $file_no,
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
