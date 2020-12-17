@@ -8,7 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use HasApiTokens, Notifiable,HasRoles;
 
@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'firstname', 'middlename', 'surname', 'email', 'password', 'type', 'avatar', 'req2fa', 'file_no', 'role', 'ippis_no', 'status'
+        'firstname', 'middlename', 'surname', 'email', 'password', 'type', 'avatar', 'req2fa', 'file_no', 'role', 'ippis_no', 'status', 'nin', 'work_place',
     ];
 
     /**

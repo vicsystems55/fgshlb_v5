@@ -111,6 +111,18 @@
                                                     </span>
                                                 @enderror
                                             </div>
+
+                                            <div class="form-label-group">
+                                                <span>PLACE OF WORK (REQUIRED) </span>
+                                                <!-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> -->
+                                                <input id="work_place" type="text" class="form-control @error('work_place') is-invalid @enderror" name="work_place" placeholder="Work Place" required autocomplete="work_place">
+                                                <label for="work_place">Password</label>
+                                                @error('work_place')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
                                     
                                     
                                     
@@ -119,6 +131,21 @@
 
 
                                     <div class="col-md-6">
+
+
+                                            
+
+                                            <div class="form-label-group">
+                                                <span>NIN NUMBER (REQUIRED) </span>
+                                                <!-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> -->
+                                                <input id="nin" type="text" class="form-control @error('nin') is-invalid @enderror" name="nin" placeholder="National Identiy Number" required autocomplete="nin">
+                                                <label for="nin">Password</label>
+                                                @error('nin')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
                                     
                                                
                                             <div class="form-label-group">

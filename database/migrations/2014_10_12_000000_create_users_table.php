@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->default('avatar.png');
             $table->string('req2fa')->default('no');
             $table->string('file_no')->unique();
+            $table->string('nin')->unique();
+            $table->string('work_place');
             $table->string('ippis_no')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
