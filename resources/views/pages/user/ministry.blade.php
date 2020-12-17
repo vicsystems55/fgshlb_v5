@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{ asset('vendors/css/file-uploaders/dropzone.min.css') }}"> -->
         <link rel="stylesheet" href="{{ asset('vendors/css/pickers/pickadate/pickadate.css') }}">
         <link rel="stylesheet" href="{{ asset('vendors/css/forms/select/select2.min.css') }}">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
 
 @endsection
 
@@ -52,63 +52,17 @@
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <label for="">Select Name of Ministry</label>
-                                            <select name="ministry" class="select2 form-control" id="">
 
-                                            <option value="{{$personal_data->ministry??''}}">{{$personal_data->ministry??''}}</option>
-
-                                                @foreach($fed_min as $min)
-
-                                                <option value="{{$min->title}}">{{$min->title}}</option>
-
-                                                @endforeach
-
-                                            </select>
+                                            <div class="ui-widget">
+                                            <label for="ministy">Select Name of Ministry</label>
+                                            <input id="ministry" class="form-control" name="ministry"  placeholder="Enter name of Ministry">
+                                        
+                                            </div>
                                         </div>
 
                                         <div class="form-group">
                                         <label for="">Select Parastatals</label>
-                                            <select name="parastatals" class="select2 form-control" id="">
-
-                                                <option value=""></option>
-                                                
-                                            <option value="{{$personal_data->parastal??''}}">{{$personal_data->parastal??''}}</option>
-                                            <option value="" >ABUJA CHAMBER OF COMMERCE, INDUSTRY, MINES & AGRICULTURE</option>
-<option value="" >ABUJA CHIEF MAGISTRATE COURT</option>
-<option value="" >ABUJA COUNCIL FOR ARTS AND CULTUR</option>
-<option value="" >ABUJA ENVIRONMENTAL PROTECTION BOARD</option>
-<option value="" >ABUJA HIGH COURT OF JUSTICE</option>
-<option value="" >ABUJA INVESTMENT AND PROPERTY DEV. CO. LTD.</option>
-<option value="" >ABUJA MUNICIPAL AREA COUNCIL</option>
-<option value="" >ABUJA URBAN MASS TRANSIT COMPANY</option>
-<option value="" >ADMINISTRATIVE STAFF COLLEGE OF NIGERIA (ASCON)</option>
-<option value="" >ALUMINUM SMELTING CO. OF NIGERIA LTD. (ALSCON)</option>
-<option value="" >AREA COUNCIL SERVICE BOAR</option>
-<option value="" >AREA COUNCIL STAFF PENSION BOARD</option>
-<option value="" >ARMY RESERVE RECRUITMENT AND RESETTLEMENT CENTRE</option>
-<option value="" >CALABAR EXPORT PROCESSING ZONES AUTHORITY (CEPZ)</option>
-<option value="" >CENTRE FOR DISTANT LEARNING & CONTINUING EDUCATION</option>
-<option value="" >CENTRAL BANK OF NIGERIA (CBN)</option>
-<option value="" >CHRISTIAN WELFARE PILGRIMS BOARD</option>
-<option value="" >CODE OF CONDUCT BUREAU</option>
-<option value="" >COMMITTEE ON DEVOLUTION OF POWER</option>
-<option value="" >BETWEEN FEDERAL STATES AND LOCAL GOVERNMENTS</option>
-<option value="" >COMMITTEE ON VISION 2010 PROGRAMME</option>
-<option value="" >CORPORATE AFFAIRS COMMISSION</option>
-<option value="" >COUNCIL OF LEGAL EDUCATION</option>
-<option value="" >DAILY TIMES OF NIGERIA PL</option>
-<option value="" >DEPARTMENT OF IMMIGRATION SERVICES</option>
-<option value="" >NATIONAL CIVIL REGISTRATION</option>
-<option value="" >DEPARTMENT OF SOIL EROSION & FLOOD CONTROL</option>
-<option value="" >DEPARTMENT OF STATES & LOCAL GOVERNMENTS AFFAIRS</option>
-                                                @foreach($parastatals as $p)
-
-                                                <option value="{{$p->name}}">{{$p->name}}</option>
-
-
-
-                                                @endforeach
-                                                </select>
+                                            <input type="text" class="form-control"  name="parastatal" placeholder="Enter name of parastatal" >
                                         </div>
 
                                         <div class="form-group">
@@ -253,5 +207,9 @@
         <script src="{{ asset('js/scripts/forms/select/form-select2.js') }}"></script>
 
         <script src="{{ asset('lga/js/lga.min.js') }}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{{ asset('ministries/autocomplete.js') }}"></script>
+        <script src="{{ asset('parastatals/autocomplete.js') }}"></script>
 @endsection
 

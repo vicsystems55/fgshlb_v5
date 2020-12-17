@@ -87,79 +87,14 @@
 
 
   <div class="row">
-    <div class="col-md-3 col-12">
-      
-      <div class="card {{Auth::user()->status =='verified' ?'bg-success':''}}" style="height: 325.556px;">
-          <div class="card-header mx-auto pb-0">
-            <div class="row m-0">
-              <div class="col-sm-12 text-center  ">
-                <h2 class="{{Auth::user()->status =='verified' ?'text-white':''}}">Step 1</h2>
-              </div>
-              <div class="col-sm-12 text-center">
-              
-              </div>
-            </div>
-          </div>
-              
-          <div class="card-content">
-            <div class="card-body text-center mx-auto " style="height: 180.556px;">
-            <p class="
-            {{Auth::user()->status =='verified' ?'text-white':''}}
-            ">Application Form N 1000</p>
-              <div class="">
-                <img width="120" height="120" class="img-fluid" src="{{config('app.url')}}/images/cardz.png" alt="img placeholder">
-              </div>
-             
-             
-            </div>
-            <div class="card-footer">
-                @if(Auth::user()->status=='verified')
-
-                <button  class="btn gradient-light-success btn-block waves-effect waves-light">Form Purchased</button>
-
-
-
-                @else
-
-                <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
-                            
-                            <input type="hidden" name="email" value="{{Auth::user()->email}}"> {{-- required --}}
-                            <input type="hidden" name="orderID" value="345">
-                            <input type="hidden" name="amount" value="100000"> {{-- required in kobo --}}
-                            <input type="hidden" name="quantity" value="1">
-                            <input type="hidden" name="currency" value="NGN">
-                            <input type="hidden" name="callback_url" value="{{ config('app.url')}}payment/callback">
-                            <input type="hidden" name="metadata" value="{{ json_encode($array = [
-                            'key_name' => 'value',
-                            
-                            ]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
-                            <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
-                            {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
-            
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
-            
-                          
-                                <button class="btn gradient-light-success btn-sm btn-block waves-effect waves-light mb-1" type="submit" value="Pay Now!">
-                                    <i class="fa fa-plus-circle fa-lg"></i> Pay with Paystack
-                                </button>
-                     
-                  </form>
-                      
-                  <button class="btn btn-block btn-sm btn-primary shadow">Pay with Remita</button>
-
-
-                @endif
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-12">
+   
+    <div class="col-md-4 col-12">
      
      <div class="card {{$application_stage?'bg-success text-white':''}}" style="height: 325.556px;">
           <div class="card-header mx-auto pb-0">
             <div class="row m-0">
               <div class="col-sm-12 text-center">
-                <h2 class="{{$application_stage?'text-white':''}}">Step 2</h2>
+                <h2 class="{{$application_stage?'text-white':''}}">Step 1</h2>
               </div>
             
             </div>
@@ -180,13 +115,13 @@
         </div>
     </div>
 
-    <div class="col-md-3 col-12">
+    <div class="col-md-4 col-12">
      
      <div class="card" style="height: 325.556px;">
           <div class="card-header mx-auto pb-0">
             <div class="row m-0">
               <div class="col-sm-12 text-center">
-                <h2>Step 3</h2>
+                <h2>Step 2</h2>
               </div>
               <div class="col-sm-12 text-center">
                
@@ -208,13 +143,13 @@
           </div>
         </div>
     </div>
-    <div class="col-md-3 col-12">
+    <div class="col-md-4 col-12">
      
      <div class="card" style="height: 325.556px;">
           <div class="card-header mx-auto pb-0">
             <div class="row m-0">
               <div class="col-sm-12 text-center">
-                <h2>Step 4</h2>
+                <h2>Step 3</h2>
               </div>
               <div class="col-sm-12 text-center">
                

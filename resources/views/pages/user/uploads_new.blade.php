@@ -100,7 +100,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h2 class="{{$user_passport?'text-white':''}}">Passport</h2>
+                                        <h2 class="{{$user_passport?'text-white':''}}">Passport Photograph</h2>
                                         <ul>
                                             <li>Pixels: 340 x 340</li>
                                             <li>File size limit: 120kb</li>
