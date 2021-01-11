@@ -6,7 +6,7 @@ use Closure;
 
 use Auth;
 
-class AccountsMiddleware
+class CPOMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class AccountsMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->role == "Accounts"){
+        if(Auth::check() && Auth::user()->role == "CPO"){
 
             return $next($request); 
             }

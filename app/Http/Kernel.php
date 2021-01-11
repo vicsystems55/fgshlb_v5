@@ -66,8 +66,24 @@ class Kernel extends HttpKernel
         'deskoffice' => \App\Http\Middleware\DeskOfficeMiddleware::class,
         'es' => \App\Http\Middleware\ESMiddleware::class,
         'es_office' => \App\Http\Middleware\ESOfficeMiddleware::class,
+
+
         'head_of_operations' => \App\Http\Middleware\HeadOfOperationsMiddleware::class,
+
+        'loans_accounts' => \App\Http\Middleware\LoansAccountsMiddleware::class,
+
+        'checking' => \App\Http\Middleware\CheckingMiddleware::class,
+
+        'internal_auditor' => \App\Http\Middleware\InternalAuditorMiddleware::class,
+
+        'cpo' => \App\Http\Middleware\CPOMiddleware::class,
+
+        'repayment_unit' => \App\Http\Middleware\RepaymentUnitMiddleware::class,
+
+        'ict' => \App\Http\Middleware\ICTMiddleware::class,
+
         'user' => \App\Http\Middleware\UserMiddleware::class,
+
         'application_stage' => \App\Http\Middleware\ApplicationStageMiddleware::class,
 
 

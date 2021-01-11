@@ -80,6 +80,19 @@ class DeskOfficePageController extends Controller
     }
 
 
+    public function search()
+    {
+        //
+        $pageConfigs = [
+            'pageHeader' => true
+        ];
+
+        return view('pages/deskoffice/search', [
+            'pageConfigs' => $pageConfigs
+        ]);
+    }
+
+
     public function operations()
     {
         //

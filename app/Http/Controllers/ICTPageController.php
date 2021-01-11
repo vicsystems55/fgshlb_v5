@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HeadOfOperationsPageController extends Controller
+class ICTPageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class HeadOfOperationsPageController extends Controller
             'pageHeader' => true
         ];
 
-        return view('/pages/head-operations-dashboard', [
+        return view('/pages/ict-dashboard', [
             'pageConfigs' => $pageConfigs
         ]);
     }
@@ -31,24 +31,6 @@ class HeadOfOperationsPageController extends Controller
     public function create()
     {
         //
-    }
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function search()
-    {
-        //
-        $pageConfigs = [
-            'pageHeader' => true
-        ];
-
-        return view('/pages/head_operations/search', [
-            'pageConfigs' => $pageConfigs
-        ]);
     }
 
     /**

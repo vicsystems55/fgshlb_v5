@@ -13,8 +13,8 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item  {{ (request()->is('es')) ? 'active' : '' }}">
-                <a href="/es">
+                <li class=" nav-item  {{ (request()->is('head_operations')) ? 'active' : '' }}">
+                <a href="/head_operations">
                 <i class="feather icon-home"></i>
                 <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
                 <span class="badge badge badge-warning badge-pill float-right"></span>
@@ -51,15 +51,32 @@
                         </li>
                     </ul>
                 </li> -->
-                <li class=" {{ (request()->is('es/applications','es/single_application', 'es/single_application/*')) ? 'active' : '' }} nav-item"><a href="{{route('es.applications')}}">
+                <li class=" {{ (request()->is('head_operations/applications','head_operations/single_application', 'head_operations/single_application/*')) ? 'active' : '' }} nav-item"><a href="">
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Applications</span></a>
                 </li>
 
-                <li class="{{ (request()->is('user/earnings/')) ? 'active' : '' }} nav-item"><a href="gs')}}">
+                <li class="{{ (request()->is('head_operations/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Shortlisted Box</span></a>
+                </li>
+
+                <li class="{{ (request()->is('head_operations/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Approval Box</span></a>
+                </li>
+
+                <li class="{{ (request()->is('head_operations/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Payment Box</span></a>
+                </li>
+
+                <li class="{{ (request()->is('head_operations/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Payment Approval Box</span></a>
+                </li>
+
+
+                <li class="{{ (request()->is('head_operations/earnings/')) ? 'active' : '' }} nav-item"><a href="">
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Audit Trail</span></a>
                 </li>
 
-                <li class="{{ (request()->is('user/earnings/')) ? 'active' : '' }} nav-item"><a href="gs')}}">
+                <li class="{{ (request()->is('head_operations/earnings/')) ? 'active' : '' }} nav-item"><a href="">
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Report</span></a>
                 </li>
                 
@@ -68,7 +85,7 @@
                
                
                
-                <li class=" nav-item {{ (request()->is('es/settings', 'es/settings/*')) ? 'active' : '' }}"><a href="{{route('es.settings')}}"><i class="feather icon-log-out"></i><span class="menu-title" data-i18n="Raise Support">Settings</span></a>
+                <li class=" nav-item {{ (request()->is('head_operations/settings', 'head_operations/settings/*')) ? 'active' : '' }}"><a href="{{route('es.settings')}}"><i class="feather icon-log-out"></i><span class="menu-title" data-i18n="Raise Support">Settings</span></a>
                 </li>
             </ul>
         </div>

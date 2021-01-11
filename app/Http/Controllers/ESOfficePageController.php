@@ -23,6 +23,44 @@ class ESOfficePageController extends Controller
         ]);
     }
 
+    public function shortlisted_box()
+    {
+        //
+        $pageConfigs = [
+            'pageHeader' => true
+        ];
+
+        return view('/pages/es-office-dashboard', [
+            'pageConfigs' => $pageConfigs
+        ]);
+    }
+
+
+    public function approval_box()
+    {
+        //
+        $pageConfigs = [
+            'pageHeader' => true
+        ];
+
+        return view('/pages/es-office-dashboard', [
+            'pageConfigs' => $pageConfigs
+        ]);
+    }
+
+
+    public function search()
+    {
+        //
+        $pageConfigs = [
+            'pageHeader' => true
+        ];
+
+        return view('/pages/es_office/search', [
+            'pageConfigs' => $pageConfigs
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

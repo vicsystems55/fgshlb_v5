@@ -7,7 +7,7 @@
                         <h2 class="text-success brand-text mb-0">FGSHLB</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
-                <i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block primary" data-ticon="icon-disc"></i></a></li>
+                <i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block success" data-ticon="icon-disc"></i></a></li>
             </ul>
         </div>
         <div class="shadow-bottom"></div>
@@ -55,11 +55,35 @@
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Applications</span></a>
                 </li>
 
-                <li class="{{ (request()->is('user/earnings/')) ? 'active' : '' }} nav-item"><a href="gs')}}">
+                <li class=" {{ (request()->is('es/applications','es/single_application', 'es/shortlisted_box')) ? 'active' : '' }} nav-item"><a href="{{route('es.applications')}}">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Shortlisted Box</span></a>
+                </li>
+
+                <li class=" {{ (request()->is('es/applications','es/single_application', 'es/approval_box/*')) ? 'active' : '' }} nav-item"><a href="{{route('es.applications')}}">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Approval Box</span></a>
+                </li>
+
+                <li class="{{ (request()->is('es/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Payment Box</span></a>
+                </li>
+
+                <li class="{{ (request()->is('es/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Payment Approval Box</span></a>
+                </li>
+
+                <li class="{{ (request()->is('es_office/earnings/')) ? 'active' : '' }} nav-item"><a href="">
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Audit Trail</span></a>
                 </li>
 
-                <li class="{{ (request()->is('user/earnings/')) ? 'active' : '' }} nav-item"><a href="gs')}}">
+                <li class="{{ (request()->is('es_office/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Staff List</span></a>
+                </li>
+
+                <li class="{{ (request()->is('es_office/earnings/')) ? 'active' : '' }} nav-item"><a href="">
+                <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Departments</span></a>
+                </li>
+
+                <li class="{{ (request()->is('es_office/earnings/')) ? 'active' : '' }} nav-item"><a href="">
                 <i class="feather icon-arrow-down"></i></i><span class="menu-title" data-i18n="Documentation">Report</span></a>
                 </li>
                 

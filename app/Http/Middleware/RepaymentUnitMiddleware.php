@@ -4,9 +4,10 @@ namespace App\Http\Middleware;
 
 use Closure;
 
+
 use Auth;
 
-class AccountsMiddleware
+class RepaymentUnitMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,7 +18,7 @@ class AccountsMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->role == "Accounts"){
+        if(Auth::check() && Auth::user()->role == "RepaymentUnit"){
 
             return $next($request); 
             }

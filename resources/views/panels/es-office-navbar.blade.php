@@ -21,7 +21,7 @@
             </ul>
             <ul class="nav navbar-nav bookmark-icons">
               <li class="nav-item d-none d-lg-block">
-                  <h4 class="text-center">{{Auth::user()->role}} Dashboard</h4>
+                  <h4 class="text-center">Dashboard: ES Office</h4>
                
                 </a>
               </li>
@@ -56,7 +56,7 @@
                   class="ficon feather icon-search"></i></a>
               <div class="search-input">
                 <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
-                <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1"
+                <input class="input" type="text" placeholder="Explore FGSHLB..." tabindex="-1"
                   data-search="starter-list" />
                 <div class="search-input-close"><i class="feather icon-x"></i></div>
                 <ul class="search-list search-list-main"></ul>

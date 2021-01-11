@@ -16,9 +16,9 @@ class UsersTableSeeder extends Seeder
 
             [
                 'id' => '10001',
-                'firstname' => 'Super',
+                'firstname' => 'Festus',
                
-                'surname' => 'Admin',
+                'surname' => 'Boman',
                 'email' => 'admin001@fgshlb.com',
                 
                 'email_verified_at' => now(),
@@ -246,9 +246,9 @@ class UsersTableSeeder extends Seeder
 
             [
                 'id' => '9999',
-                'firstname' => 'S',
-                'surname' => 'S',
-                'email' => 'headofoperqations@fgshlb.gov.ng',
+                'firstname' => 'Salamatu',
+                'surname' => 'Ahmed',
+                'email' => 'headofoperations@fgshlb.gov.ng',
                 
                 'email_verified_at' => now(),
                 'password' =>  Hash::make('headofoperations2020'),
@@ -258,6 +258,145 @@ class UsersTableSeeder extends Seeder
                 'type' => 'standard',
                 'ippis_no' => '*****##',
                 'file_no' => 'FGSHLB-2020-****##',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '2121',
+                'firstname' => 'User01',
+                'surname' => '001',
+                'email' => 'loansaccounts1@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('loansaccounts2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'LoansAccounts',
+                'type' => 'standard',
+                'ippis_no' => '****###',
+                'file_no' => 'FGSHLB-2020-***###',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '090999',
+                'firstname' => 'User01',
+                'surname' => '001',
+                'email' => 'checking1@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('checking2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'Checking',
+                'type' => 'standard',
+                'ippis_no' => '***####',
+                'file_no' => 'FGSHLB-2020-**####',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '667766',
+                'firstname' => 'User01',
+                'surname' => '001',
+                'email' => 'auditor1@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('auditor2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'InternalAuditor',
+                'type' => 'standard',
+                'ippis_no' => '*######',
+                'file_no' => 'FGSHLB-2020-######',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '8899292',
+                'firstname' => 'User01',
+                'surname' => '001',
+                'email' => 'cpo1@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('auditor2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'CPO',
+                'type' => 'standard',
+                'ippis_no' => '#######',
+                'file_no' => 'FGSHLB-2020-#######',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '8899292',
+                'firstname' => 'User01',
+                'surname' => '001',
+                'email' => 'repaymentunit1@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('repaymentunit2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'RepaymentUnit',
+                'type' => 'standard',
+                'ippis_no' => '########',
+                'file_no' => 'FGSHLB-2020-########',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+
+            [
+                'id' => '772782',
+                'firstname' => 'User01',
+                'surname' => '001',
+                'email' => 'ict1@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('information2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'ICT',
+                'type' => 'standard',
+                'ippis_no' => '#########',
+                'file_no' => 'FGSHLB-2020-#########',
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+            [
+                'id' => '338289',
+                'firstname' => 'User02',
+                'surname' => '002',
+                'email' => 'ict2@fgshlb.gov.ng',
+                
+                'email_verified_at' => now(),
+                'password' =>  Hash::make('information2020'),
+                
+                'email_verified_at' => now(),
+                'role' => 'ICT',
+                'type' => 'standard',
+                'ippis_no' => '$#########',
+                'file_no' => 'FGSHLB-2020-$#########',
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),

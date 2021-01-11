@@ -27,6 +27,70 @@ class ChooseRoleController extends Controller
         }
 
 
+        elseif (Auth::user()->role =='LoansAccounts') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/loans_accounts');
+        }
+
+
+        elseif (Auth::user()->role =='Checking') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/checking');
+        }
+
+        elseif (Auth::user()->role =='InternalAuditor') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/internal_auditor');
+        }
+
+
+        elseif (Auth::user()->role =='CPO') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/cpo');
+        }
+
+        elseif (Auth::user()->role =='RepaymentUnit') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/repayment_unit');
+        }
+
+
+        elseif (Auth::user()->role =='ICT') {
+
+            ActivityLog::create([
+                'action_by' => Auth::user()->id,
+                'title' => 'User Authentication',
+                'log' => 'Just Logged in'
+            ]);
+            return redirect('/ict');
+        }
+
+
         elseif (Auth::user()->role =='HeadOfOperations') {
 
             ActivityLog::create([

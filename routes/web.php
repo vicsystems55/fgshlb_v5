@@ -100,6 +100,8 @@ Route::group(['middleware' => ['auth','deskoffice'], 'prefix' => 'deskoffice'], 
 
   Route::get('/notifications', 'DeskOfficePageController@notifications')->name('dk.notifications');
 
+  Route::get('/search', 'DeskOfficePageController@search')->name('dk.search');
+
   Route::get('/report', 'DeskOfficePageController@report')->name('dk.report');
 
   Route::get('/operations', 'DeskOfficePageController@operations')->name('operations');
@@ -120,9 +122,52 @@ Route::group(['middleware' => ['auth','accounts'], 'prefix' => 'accounts'], func
 });
 
 
+Route::group(['middleware' => ['auth','loans_accounts'], 'prefix' => 'loans_accounts'], function(){
+
+  Route::get('/', 'LoansAccountsPageController@index')->name('loans_accounts');
+
+});
+
+
+Route::group(['middleware' => ['auth','checking'], 'prefix' => 'checking'], function(){
+
+  Route::get('/', 'CheckingPageController@index')->name('checking');
+
+});
+
+Route::group(['middleware' => ['auth','internal_auditors'], 'prefix' => 'internal_auditors'], function(){
+
+  Route::get('/', 'InternalAuditorsPageController@index')->name('internal_auditors');
+
+});
+
+
+Route::group(['middleware' => ['auth','cpo'], 'prefix' => 'cpo'], function(){
+
+  Route::get('/', 'CPOPageController@index')->name('cpo');
+
+});
+
+Route::group(['middleware' => ['auth','repayment_unit'], 'prefix' => 'repayment_unit'], function(){
+
+  Route::get('/', 'RepaymentUnitPageController@index')->name('repayment_unit');
+
+});
+
+Route::group(['middleware' => ['auth','ict'], 'prefix' => 'ict'], function(){
+
+  Route::get('/', 'ICTPageController@index')->name('ict');
+
+});
+
+
 Route::group(['middleware' => ['auth','head_of_operations'], 'prefix' => 'head_operations'], function(){
 
   Route::get('/', 'HeadOfOperationsPageController@index')->name('head_operations.home');
+  Route::get('/notifications', 'HeadOfOperationsPageController@notifications')->name('head_operations.notifications');
+  Route::get('/search', 'HeadOfOperationsPageController@search')->name('head_operations.search');
+  Route::get('/all_applications', 'HeadOfOperationsPageController@all_applications')->name('head_operations.all_applications');
+  Route::get('/single_application/{slug}', 'HeadOfOperationsPageController@single_application')->name('head_operations.single_application');
 
 });
 
@@ -130,6 +175,9 @@ Route::group(['middleware' => ['auth','head_of_operations'], 'prefix' => 'head_o
 Route::group(['middleware' => ['auth','es_office'], 'prefix' => 'es_office'], function(){
 
   Route::get('/', 'ESOfficePageController@index')->name('es_office.home');
+  Route::get('/notifications', 'ESOfficePageController@notifications')->name('es_office.notifications');
+  Route::get('/search', 'ESOfficePageController@search')->name('es_office.search');
+  Route::get('/all_applications', 'HeadOfOperationsPageController@all_applications')->name('es_office.all_applications');
 
 });
 
