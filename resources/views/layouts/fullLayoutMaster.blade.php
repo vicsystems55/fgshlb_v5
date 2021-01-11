@@ -44,7 +44,7 @@ $configData = Helper::applClasses();
         </div>
     </div>
     <!-- End: Content-->
-
+    @include('panels/footer')
     {{-- include default scripts --}}
     @include('panels/scripts')
 
